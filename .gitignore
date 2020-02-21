@@ -4,6 +4,17 @@
 *.dll
 *.so
 *.dylib
+*.DS_Store
+*.code-workspace
+
+bin/
+pkg/
+src/
+
+bin/*
+pkg/*
+src/*
+secret/*
 
 # Test binary, built with `go test -c`
 *.test
