@@ -5,8 +5,6 @@ import (
 	"os"
 	"os/signal"
 	"runtime"
-
-	"github.com/fhmq/hmq/broker"
 )
 
 func main() {
