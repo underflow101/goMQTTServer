@@ -21,7 +21,7 @@ func main() {
 	b.Start()
 
 	s := waitForSignal()
-	log.Println("signal received, broker closed.", s)
+	log.Println("Signal received, broker closed.", s)
 }
 
 func waitForSignal() os.Signal {
