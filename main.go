@@ -5,6 +5,8 @@ import (
 	"os"
 	"os/signal"
 	"runtime"
+
+	"github.com/underflow101/goMQTTServer/broker"
 )
 
 func main() {

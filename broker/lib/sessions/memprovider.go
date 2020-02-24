@@ -1,7 +1,8 @@
 package sessions
 
 import (
-
+	"fmt"
+	"sync"
 )
 
 var _ SessionsProvider = (*memProvider)(nil)
@@ -16,8 +17,8 @@ func init() {
 }
 
 func NewMemProvider() *memProvider {
-	return &memProvider {
-		st: make(map[string]*Session)
+	return &memProvider{
+		st: make(map[string]*Session),
 	}
 }
 
