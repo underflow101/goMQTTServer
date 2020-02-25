@@ -56,6 +56,7 @@ func newMessagePool() []chan *Message {
 }
 
 func NewBroker(config *Config) (*Broker, error) {
+	fmt.Println("New Broker starting... Please wait...")
 	if config == nil {
 		config = DefaultConfig
 	}
