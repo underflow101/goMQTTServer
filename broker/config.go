@@ -69,7 +69,7 @@ func ConfigureConfig(args []string) (*Config, error) {
 		help       bool
 		configFile string
 	)
-	fs := flag.NewFlagSet("hmq-broker", flag.ExitOnError)
+	fs := flag.NewFlagSet("goMQTTServer-broker", flag.ExitOnError)
 	fs.Usage = showHelp
 
 	fs.BoolVar(&help, "h", false, "Show this message.")

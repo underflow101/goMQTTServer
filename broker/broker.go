@@ -19,6 +19,9 @@ import (
 	"golang.org/x/net/websocket"
 )
 
+// 1. message get -> real message
+// 2. message get -> message when client connects to MQTT broker
+
 const (
 	MessagePoolNum        = 1024
 	MessagePoolMessageNum = 1024
@@ -107,6 +110,8 @@ func (b *Broker) SubmitWork(clientId string, msg *Message) {
 	} else {
 		b.wpool.Submit(clientId, func() {
 			ProcessMessage(msg)
+			fmt.Print("1. message get: ")
+
 		})
 	}
 
@@ -262,6 +267,8 @@ func (b *Broker) handleConnection(typ int, conn net.Conn) {
 		log.Error("received msg that was not Connect")
 		return
 	}
+
+	fmt.Println("2. message get: ", msg)
 
 	log.Info("read connect from ", zap.String("clientID", msg.ClientIdentifier))
 
