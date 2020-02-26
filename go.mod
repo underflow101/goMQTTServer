@@ -6,7 +6,6 @@ require (
 	github.com/Shopify/sarama v1.23.0
 	github.com/bitly/go-simplejson v0.5.0
 	github.com/eclipse/paho.mqtt.golang v1.2.0
-	github.com/fhmq/hmq v0.0.0-20200119031921-55f1f1aa8001
 	github.com/gin-gonic/gin v1.4.0
 	github.com/labstack/gommon v0.3.0
 	github.com/patrickmn/go-cache v2.1.0+incompatible

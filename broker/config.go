@@ -89,8 +89,8 @@ func ConfigureConfig(args []string) (*Config, error) {
 	fs.StringVar(&config.WsPort, "wsport", "", "port for ws to listen on")
 	fs.StringVar(&config.WsPath, "wsp", "", "path for ws to listen on")
 	fs.StringVar(&config.WsPath, "wspath", "", "path for ws to listen on")
-	fs.StringVar(&configFile, "config", "", "config file for hmq")
-	fs.StringVar(&configFile, "c", "", "config file for hmq")
+	fs.StringVar(&configFile, "config", "", "config file")
+	fs.StringVar(&configFile, "c", "", "config file")
 	fs.BoolVar(&config.Debug, "debug", false, "enable Debug logging.")
 	fs.BoolVar(&config.Debug, "d", false, "enable Debug logging.")
 
