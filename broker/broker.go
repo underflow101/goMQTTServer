@@ -112,12 +112,10 @@ func (b *Broker) SubmitWork(clientId string, msg *Message) {
 		b.wpool.Submit(clientId, func() {
 			ProcessMessage(msg)
 			fmt.Print("1. message get: ")
-			msg2 := msg.packet.Details()
-			msg3 := reflect.TypeOf(msg.packet).String()[9:]
-			msg4 := msg.packet.String()
+			msg1 := reflect.TypeOf(msg.packet).String()[9:]
+			msg2 := msg.packet.String()
+			fmt.Println(msg1)
 			fmt.Println(msg2)
-			fmt.Println(msg3)
-			fmt.Println(msg4)
 		})
 	}
 
