@@ -232,7 +232,6 @@ func (c *client) processRouterPublish(packet *packets.PublishPacket) {
 		log.Error("publish with unknown qos", zap.String("ClientID", c.info.clientID))
 		return
 	}
-
 }
 
 func (c *client) processClientPublish(packet *packets.PublishPacket) {

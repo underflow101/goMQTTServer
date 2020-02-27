@@ -21,7 +21,6 @@ var (
 	log = logger.Get().Named("bridge")
 )
 
-//Elements kafka publish elements
 type Elements struct {
 	ClientID  string `json:"clientid"`
 	Username  string `json:"username"`
@@ -32,19 +31,12 @@ type Elements struct {
 	Action    string `json:"action"`
 }
 
-const (
-	//Kafka plugin name
-	Kafka = "kafka"
-)
-
 type BridgeMQ interface {
 	Publish(e *Elements) error
 }
 
 func NewBridgeMQ(name string) BridgeMQ {
 	switch name {
-	case Kafka:
-		return InitKafka()
 	default:
 		return &mockMQ{}
 	}
