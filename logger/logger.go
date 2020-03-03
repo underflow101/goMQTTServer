@@ -17,7 +17,6 @@ func init() {
 	encoderCfg.EncodeTime = zapcore.ISO8601TimeEncoder
 }
 
-// NewDevLogger return a logger for dev builds
 func NewDevLogger() (*zap.Logger, error) {
 	logCfg := zap.NewProductionConfig()
 	logCfg.Level = zap.NewAtomicLevelAt(zap.DebugLevel)
@@ -26,7 +25,6 @@ func NewDevLogger() (*zap.Logger, error) {
 	return logCfg.Build()
 }
 
-// NewProdLogger return a logger for production builds
 func NewProdLogger() (*zap.Logger, error) {
 	logCfg := zap.NewProductionConfig()
 	logCfg.DisableStacktrace = true
