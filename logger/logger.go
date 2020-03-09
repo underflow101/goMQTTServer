@@ -6,7 +6,6 @@ import (
 )
 
 var (
-	// env can be setup at build time with Go Linker. Value could be prod or whatever else for dev env
 	instance   *zap.Logger
 	logCfg     zap.Config
 	encoderCfg = zap.NewProductionEncoderConfig()
