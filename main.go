@@ -1,5 +1,4 @@
 // MQTT broker in Golang
-
 package main
 
 import (
